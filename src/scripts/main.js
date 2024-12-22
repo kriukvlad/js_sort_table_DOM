@@ -19,7 +19,7 @@ thead.forEach((item) => {
       const numB = parseFloat(valueB.replace(/[^0-9.-]+/g, '')) || valueB;
 
       // Порівняння чисел або тексту
-      if (typeof numA === 'number' && typeof numB === 'number') {
+      if (!isNaN(numA) && !isNaN(numB)) {
         return numA - numB;
       }
 
